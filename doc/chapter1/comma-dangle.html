@@ -1,0 +1,486 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>逗号结尾 | 简介</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.5.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../doc/chapter1/no-cond-assign.html" />
+    
+    
+    <link rel="prev" href="../../doc/chapter1/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.1.1" data-chapter-title="逗号结尾" data-filepath="doc/chapter1/comma-dangle.md" data-basepath="../.." data-revision="Wed Nov 25 2015 16:32:21 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> 目录</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="doc/chapter1/index.html">
+            
+                
+                    <a href="../../doc/chapter1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        易错点
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.1" data-path="doc/chapter1/comma-dangle.html">
+            
+                
+                    <a href="../../doc/chapter1/comma-dangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        逗号结尾
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="doc/chapter1/no-cond-assign.html">
+            
+                
+                    <a href="../../doc/chapter1/no-cond-assign.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        条件中赋值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="doc/chapter1/no-console.html">
+            
+                
+                    <a href="../../doc/chapter1/no-console.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        禁用console
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="doc/chapter1/no-constant-conditione.html">
+            
+                
+                    <a href="../../doc/chapter1/no-constant-conditione.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.4.</b>
+                        
+                        no-constant-condition
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="#no-control-regex.html">
+            
+            <span><b>1.1.5.</b> no-control-regex</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="#no-debugger.html">
+            
+            <span><b>1.1.6.</b> no-debugger</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="#no-dupe-args.html">
+            
+            <span><b>1.1.7.</b> no-dupe-args</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="#no-dupe-keys.html">
+            
+            <span><b>1.1.8.</b> no-dupe-keys</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="#no-duplicate-case.html">
+            
+            <span><b>1.1.9.</b> no-duplicate-case</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="#no-empty-character-class.html">
+            
+            <span><b>1.1.10.</b> no-empty-character-class</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="#no-empty.html">
+            
+            <span><b>1.1.11.</b> no-empty</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="#no-ex-assign.html">
+            
+            <span><b>1.1.12.</b> no-ex-assign</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="doc/chapter2/index.html">
+            
+                
+                    <a href="../../doc/chapter2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        最佳实践
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="doc/chapter3/index.html">
+            
+                
+                    <a href="../../doc/chapter3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        严格模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="doc/chapter4/index.html">
+            
+                
+                    <a href="../../doc/chapter4/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="doc/chapter5/index.html">
+            
+                
+                    <a href="../../doc/chapter5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Node.js 和 CommonJS
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="doc/chapter6/index.html">
+            
+                
+                    <a href="../../doc/chapter6/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        代码风格
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="doc/chapter7/index.html">
+            
+                
+                    <a href="../../doc/chapter7/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        ECMAScript 6
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="doc/chapter8/index.html">
+            
+                
+                    <a href="../../doc/chapter8/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        旧规则
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >简介</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="&#x9017;&#x53F7;&#x7ED3;&#x5C3E;">&#x9017;&#x53F7;&#x7ED3;&#x5C3E;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: comma-dangle</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x5BF9;&#x4E8E;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x6570;&#x7EC4;&#x58F0;&#x660E;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x9017;&#x53F7;&#x7684;&#x89C4;&#x5219;</p>
+<p>&#x89C4;&#x5219;&#x9009;&#x9879;:</p>
+<ul>
+<li><code>&quot;always&quot;</code>  &#x59CB;&#x7EC8;&#x9700;&#x8981;&#x7ED3;&#x5C3E;&#x7684;&#x9017;&#x53F7;</li>
+<li><code>&quot;always-multiline&quot;</code> &#x4EC5;&#x5F53;&#x5355;&#x884C;&#x683C;&#x5F0F;&#x4E66;&#x5199;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x65F6;&#x7701;&#x7565;&#x7ED3;&#x5C3E;&#x7684;&#x9017;&#x53F7;</li>
+<li><code>&quot;never&quot;</code>(&#x9ED8;&#x8BA4;)  &#x4E0D;&#x5141;&#x8BB8;&#x7ED3;&#x5C3E;&#x7684;&#x9017;&#x53F7;
+<br>
+<br></li>
+</ul>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint comma-dangle: [2, &quot;always&quot;]*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+    bar<span class="token punctuation">:</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span>
+    qux<span class="token punctuation">:</span> <span class="token string">&quot;quux&quot;</span>   <span class="token comment" spellcheck="true">/*error Missing trailing comma.*/</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*error Missing trailing comma.*/</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  bar<span class="token punctuation">:</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span>
+  qux<span class="token punctuation">:</span> <span class="token string">&quot;quux&quot;</span>     <span class="token comment" spellcheck="true">/*error Missing trailing comma.*/</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint comma-dangle: [2, &quot;always-miltiline&quot;]*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+    bar<span class="token punctuation">:</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span>
+    qux<span class="token punctuation">:</span> <span class="token string">&quot;quux&quot;</span>                         <span class="token comment" spellcheck="true">/*error Missing trailing comma.*/</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span> bar<span class="token punctuation">:</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span> qux<span class="token punctuation">:</span> <span class="token string">&quot;quux&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error Unexpected trailing comma.*/</span>
+
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                       <span class="token comment" spellcheck="true">/*error Unexpected trailing comma.*/</span>
+
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                                <span class="token comment" spellcheck="true">/*error Unexpected trailing comma.*/</span>
+
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token number">2</span>                                   <span class="token comment" spellcheck="true">/*error Missing trailing comma.*/</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  bar<span class="token punctuation">:</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span>
+  qux<span class="token punctuation">:</span> <span class="token string">&quot;quux&quot;</span>                           <span class="token comment" spellcheck="true">/*error Missing trailing comma.*/</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint comma-dangle: [2, &quot;never&quot;]*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+    bar<span class="token punctuation">:</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span>
+    qux<span class="token punctuation">:</span> <span class="token string">&quot;quux&quot;</span><span class="token punctuation">,</span>   <span class="token comment" spellcheck="true">/*error Unexpected trailing comma.*/</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*error Unexpected trailing comma.*/</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  bar<span class="token punctuation">:</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span>
+  qux<span class="token punctuation">:</span> <span class="token string">&quot;quux&quot;</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">/*error Unexpected trailing comma.*/</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/comma-dangle" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../doc/chapter1/index.html" class="navigation navigation-prev " aria-label="Previous page: 易错点"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../doc/chapter1/no-cond-assign.html" class="navigation navigation-next " aria-label="Next page: 条件中赋值"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"expandable-chapters":{},"prism":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
