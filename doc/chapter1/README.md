@@ -1,9 +1,9 @@
 # 易错点
 
 + [逗号结尾](comma-dangle.md)
-+ [no-cond-assign](#no-cond-assign)
-+ [no-console](#no-console)
-+ [no-constant-condition](#no-constant-condition)
++ [no-cond-assign](no-cond-assign.md)
++ [no-console](no-console.md)
++ [no-constant-condition](no-constant-conditione.md)
 + [no-control-regex](#no-control-regex)
 + [no-debugger](#no-debugger)
 + [no-dupe-args](#no-dupe-args)

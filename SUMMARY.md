@@ -2,9 +2,9 @@
 * 目录
     * [易错点](./doc/chapter1/README.md)
         + [逗号结尾](./doc/chapter1/comma-dangle.md)
-        + [no-cond-assign](#no-cond-assign)
-        + [no-console](#no-console)
-        + [no-constant-condition](#no-constant-condition)
+        + [条件中赋值](./doc/chapter1/no-cond-assign.md)
+        + [禁用console](./doc/chapter1/no-console.md)
+        + [no-constant-condition](./doc/chapter1/no-constant-conditione.md)
         + [no-control-regex](#no-control-regex)
         + [no-debugger](#no-debugger)
         + [no-dupe-args](#no-dupe-args)

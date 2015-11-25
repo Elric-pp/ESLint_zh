@@ -1,4 +1,8 @@
 {
-  "gitbook": "2.x.x",
-  "language": "zh-cn"
+    "gitbook": "2.x.x",
+    "language": "zh-cn",
+    "plugins": ["prism", "-highlight", "expandable-chapters"],
+    "pluginsConfig": {
+        "expandable-chapters": {}
+    }
 }
