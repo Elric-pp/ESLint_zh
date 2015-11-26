@@ -5,7 +5,7 @@
     + [条件中赋值](./doc/chapter1/no-cond-assign.md)
     + [禁用console](./doc/chapter1/no-console.md)
     + [常量作条件](./doc/chapter1/no-constant-conditione.md)
-    + [no-control-regex](#no-control-regex)
+    + [在正则表达式中禁用控制字符](./doc/chapter1/no-control-regex.md)
     + [no-debugger](#no-debugger)
     + [no-dupe-args](#no-dupe-args)
     + [no-dupe-keys](#no-dupe-keys)
