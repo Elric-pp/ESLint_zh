@@ -1,12 +1,12 @@
 # 易错点
 
 + [逗号结尾](comma-dangle.md)
-+ [no-cond-assign](no-cond-assign.md)
-+ [no-console](no-console.md)
-+ [no-constant-condition](no-constant-conditione.md)
-+ [no-control-regex](#no-control-regex)
-+ [no-debugger](#no-debugger)
-+ [no-dupe-args](#no-dupe-args)
++ [条件中赋值](no-cond-assign.md)
++ [禁用console](no-console.md)
++ [常量作条件](no-constant-condition.md)
++ [在正则表达式中禁用控制字符](#no-control-regex)
++ [禁用debugger](#no-debugger)
++ [禁止参数重名](#no-dupe-args)
 + [no-dupe-keys](#no-dupe-keys)
 + [no-duplicate-case](#no-duplicate-case)
 + [no-empty-character-class](#no-empty-character-class)

@@ -1,5 +1,7 @@
 ### 禁用console
+
 规则名: no-console
+
 规则解释: console用于调试代码, 生产环境不应该有console
 
 以下的会当作错误：

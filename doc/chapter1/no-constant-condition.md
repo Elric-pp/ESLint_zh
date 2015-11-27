@@ -1,4 +1,5 @@
 ### 常量作条件
+
 规则名: no-constant-conditione
 
 以下的会当作错误：

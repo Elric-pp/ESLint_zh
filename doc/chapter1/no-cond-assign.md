@@ -1,10 +1,13 @@
 ### 条件中赋值
 规则名: no-cond-assign
+
 规则解释: 该规则是为了消除在 `for`, `if`, `while`, `do...while`等条件语句中进行容易引起误会的赋值
+
 规则选项:
 
 * `except-parens`(默认): 不允许赋值, 除了被括号包裹起来的情况
 * `always`: 全部不允许赋值
+<br/>
 
 ### "except-parens"
 
