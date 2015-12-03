@@ -21,3 +21,5 @@ var foo = {
     1: "qux"       /*error Duplicate key '1'.*/
 };
 ```
+
+[源地址](http://eslint.org/docs/rules/no-dupe-keys)

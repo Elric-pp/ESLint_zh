@@ -21,3 +21,5 @@ switch (a) {
 }
 
 ```
+
+[源地址](http://eslint.org/docs/rules/no-duplicate-case)
