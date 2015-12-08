@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>避免多余的括号 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-extra-semi.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-extra-boolean-cast.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.14" data-chapter-title="避免多余的括号" data-filepath="doc/chapter1/no-extra-parens.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -287,7 +287,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="doc/chapter1/no-extra-parens.html">
+        <li class="chapter active" data-level="1.14" data-path="doc/chapter1/no-extra-parens.html">
             
                 
                     <a href="../../doc/chapter1/no-extra-parens.html">
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -505,7 +505,34 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x907F;&#x514D;&#x591A;&#x4F59;&#x7684;&#x62EC;&#x53F7;">&#x907F;&#x514D;&#x591A;&#x4F59;&#x7684;&#x62EC;&#x53F7;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-extra-parens</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;:
+&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x5197;&#x4F59;&#x7684;&#x62EC;&#x53F7;&#x662F;&#x88AB;&#x5141;&#x8BB8;&#x7684;</p>
+<ul>
+<li>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x9762;&#x91CF;: <code>(/abc/).test(var)</code></li>
+<li>&#x81EA;&#x6267;&#x884C;&#x51FD;&#x6570;: <code>var x = (function () {})();</code>, <code>((function foo() {return 1})())</code></li>
+</ul>
+<p>&#x89C4;&#x5219;&#x9009;&#x9879;:</p>
+<ul>
+<li><code>&quot;all&quot;</code>: &#x9ED8;&#x8BA4;&#x503C;, &#x68C0;&#x67E5;&#x6240;&#x6709;&#x8868;&#x8FBE;&#x5F0F;</li>
+<li><code>&quot;functions</code>: &#x53EA;&#x68C0;&#x67E5;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-extra-parens: 2*/</span>
+
+a <span class="token operator">=</span> <span class="token punctuation">(</span>b <span class="token operator">*</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error Gratuitous parentheses around expression.*/</span>
+
+<span class="token punctuation">(</span>a <span class="token operator">*</span> b<span class="token punctuation">)</span> <span class="token operator">+</span> c<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error Gratuitous parentheses around expression.*/</span>
+
+<span class="token keyword">typeof</span> <span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*error Gratuitous parentheses around expression.*/</span>
+</code></pre>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-extra-parens: [2, &quot;functions&quot;]*/</span>
+
+<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">/*error Gratuitous parentheses around expression.*/</span>
+
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error Gratuitous parentheses around expression.*/</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-extra-parens" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -516,10 +543,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-extra-boolean-cast.html" class="navigation navigation-prev " aria-label="Previous page: 避免冗余的布尔转换"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-extra-semi.html" class="navigation navigation-next " aria-label="Next page: 避免多余的分号"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

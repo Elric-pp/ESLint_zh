@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>正则表达式中不允许空字符范围 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-empty.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-duplicate-case.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.10" data-chapter-title="正则表达式中不允许空字符范围" data-filepath="doc/chapter1/no-empty-character-class.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -227,7 +227,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="doc/chapter1/no-empty-character-class.html">
+        <li class="chapter active" data-level="1.10" data-path="doc/chapter1/no-empty-character-class.html">
             
                 
                     <a href="../../doc/chapter1/no-empty-character-class.html">
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -505,7 +505,18 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4E0D;&#x5141;&#x8BB8;&#x7A7A;&#x5B57;&#x7B26;&#x8303;&#x56F4;">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4E0D;&#x5141;&#x8BB8;&#x7A7A;&#x5B57;&#x7B26;&#x8303;&#x56F4;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-empty-character-class</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x7A7A;&#x7684;&#x5B57;&#x7B26;&#x8303;&#x56F4;[]&#x4F1A;&#x5BFC;&#x81F4;&#x4E0D;&#x53EF;&#x9884;&#x89C1;&#x7684;&#x9519;&#x8BEF;</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-empty-character-class: 2*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token regex">/^abc[]/</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*error Empty class.*/</span>
+
+<span class="token regex">/^abc[]/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*error Empty class.*/</span>
+
+bar<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/^abc[]/</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error Empty class.*/</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-empty-character-class" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -516,10 +527,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-duplicate-case.html" class="navigation navigation-prev " aria-label="Previous page: 禁止重复条件"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-empty.html" class="navigation navigation-next " aria-label="Next page: 块语句内容不能为空"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>禁止给函数赋值 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-inner-declarations.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-extra-semi.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.16" data-chapter-title="禁止给函数赋值" data-filepath="doc/chapter1/no-func-assign.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -317,7 +317,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16" data-path="doc/chapter1/no-func-assign.html">
+        <li class="chapter active" data-level="1.16" data-path="doc/chapter1/no-func-assign.html">
             
                 
                     <a href="../../doc/chapter1/no-func-assign.html">
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -505,7 +505,19 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x7981;&#x6B62;&#x7ED9;&#x51FD;&#x6570;&#x8D4B;&#x503C;">&#x7981;&#x6B62;&#x7ED9;&#x51FD;&#x6570;&#x8D4B;&#x503C;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-func-assign</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x4E24;&#x79CD;, &#x8D4B;&#x503C;&#x6216;&#x8005;&#x91CD;&#x5199;&#x51FD;&#x6570;&#x4E00;&#x822C;&#x662F;&#x5931;&#x8BEF;</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-func-assign: 2*/</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+foo <span class="token operator">=</span> bar<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">/*error &apos;foo&apos; is a function.*/</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    foo <span class="token operator">=</span> bar<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">/*error &apos;foo&apos; is a function.*/</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-func-assign" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -516,10 +528,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-extra-semi.html" class="navigation navigation-prev " aria-label="Previous page: 避免多余的分号"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-inner-declarations.html" class="navigation navigation-next " aria-label="Next page: 禁止在块语句中声明"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

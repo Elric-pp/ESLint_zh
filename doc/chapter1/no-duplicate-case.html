@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>禁止重复条件 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-empty-character-class.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-dupe-keys.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.9" data-chapter-title="禁止重复条件" data-filepath="doc/chapter1/no-duplicate-case.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -212,7 +212,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="doc/chapter1/no-duplicate-case.html">
+        <li class="chapter active" data-level="1.9" data-path="doc/chapter1/no-duplicate-case.html">
             
                 
                     <a href="../../doc/chapter1/no-duplicate-case.html">
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -505,7 +505,26 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x7981;&#x6B62;&#x91CD;&#x590D;&#x6761;&#x4EF6;">&#x7981;&#x6B62;&#x91CD;&#x590D;&#x6761;&#x4EF6;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-duplicate-case</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x5728;switch&#x8BED;&#x53E5;&#x4E2D;&#x7981;&#x6B62;&#x51FA;&#x73B0;&#x91CD;&#x590D;case</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-duplicate-case: 2*/</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    one <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token keyword">switch</span> <span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>      <span class="token comment" spellcheck="true">/*error Duplicate case label.*/</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-duplicate-case" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -516,10 +535,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-dupe-keys.html" class="navigation navigation-prev " aria-label="Previous page: 禁止键名重复"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-empty-character-class.html" class="navigation navigation-next " aria-label="Next page: 正则表达式中不允许空字符范围"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>避免冗余的布尔转换 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-extra-parens.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-ex-assign.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.13" data-chapter-title="避免冗余的布尔转换" data-filepath="doc/chapter1/no-extra-boolean-cast.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -272,7 +272,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="doc/chapter1/no-extra-boolean-cast.html">
+        <li class="chapter active" data-level="1.13" data-path="doc/chapter1/no-extra-boolean-cast.html">
             
                 
                     <a href="../../doc/chapter1/no-extra-boolean-cast.html">
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -505,7 +505,37 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x907F;&#x514D;&#x5197;&#x4F59;&#x7684;&#x5E03;&#x5C14;&#x8F6C;&#x6362;">&#x907F;&#x514D;&#x5197;&#x4F59;&#x7684;&#x5E03;&#x5C14;&#x8F6C;&#x6362;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-extra-boolean-cast</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x5728;&#x4E00;&#x4E9B;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x5982;if&#x8BED;&#x53E5;&#x7684;&#x6761;&#x4EF6;&#x91CC;, js&#x4F1A;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x6210;&#x5E03;&#x5C14;&#x503C;. &#x6B64;&#x65F6;,&#x5229;&#x7528;!!&#x8FDB;&#x884C;&#x5E03;&#x5C14;&#x503C;&#x8F6C;&#x6362;&#x662F;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7684;.</p>
+<p>&#x4EE5;&#x4E0B;&#x7684;&#x4F1A;&#x5F53;&#x4F5C;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-extra-boolean-cast: 2*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span><span class="token operator">!</span>bar<span class="token punctuation">;</span>             <span class="token comment" spellcheck="true">/*error Redundant multiple negation.*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span>bar <span class="token operator">?</span> baz <span class="token punctuation">:</span> bat<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*error Redundant double negation in a ternary condition.*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">/*error Redundant double negation in call to Boolean().*/</span>
+
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Boolean</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error Redundant double negation in Boolean constructor call.*/</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>foo<span class="token punctuation">)</span> <span class="token punctuation">{</span>                  <span class="token comment" spellcheck="true">/*error Redundant double negation in an if statement condition.*/</span>
+    <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>foo<span class="token punctuation">)</span> <span class="token punctuation">{</span>               <span class="token comment" spellcheck="true">/*error Redundant double negation in a while loop condition.*/</span>
+    <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment" spellcheck="true">/*error Redundant double negation in a do while loop condition.*/</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> <span class="token operator">!</span><span class="token operator">!</span>foo<span class="token punctuation">;</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">/*error Redundant double negation in a for loop condition.*/</span>
+    <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-extra-boolean-cast" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -516,10 +546,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-ex-assign.html" class="navigation navigation-prev " aria-label="Previous page: 禁止给catch语句中的异常参数赋值"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-extra-parens.html" class="navigation navigation-next " aria-label="Next page: 避免多余的括号"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

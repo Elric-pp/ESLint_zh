@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>块语句内容不能为空 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-ex-assign.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-empty-character-class.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.11" data-chapter-title="块语句内容不能为空" data-filepath="doc/chapter1/no-empty.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -242,7 +242,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="doc/chapter1/no-empty.html">
+        <li class="chapter active" data-level="1.11" data-path="doc/chapter1/no-empty.html">
             
                 
                     <a href="../../doc/chapter1/no-empty.html">
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -505,7 +505,29 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x5757;&#x8BED;&#x53E5;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;">&#x5757;&#x8BED;&#x53E5;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-empty</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x5757;&#x8BED;&#x53E5;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A;&#x758F;&#x6F0F;</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-empty: 2*/</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>foo<span class="token punctuation">)</span> <span class="token punctuation">{</span>         <span class="token comment" spellcheck="true">/*error Empty block statement.*/</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span>foo<span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token comment" spellcheck="true">/*error Empty block statement.*/</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">switch</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token comment" spellcheck="true">/*error Empty switch statement.*/</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>ex<span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token comment" spellcheck="true">/*error Empty block statement.*/</span>
+
+<span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">/*error Empty block statement.*/</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-empty" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -516,10 +538,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-empty-character-class.html" class="navigation navigation-prev " aria-label="Previous page: 正则表达式中不允许空字符范围"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-ex-assign.html" class="navigation navigation-next " aria-label="Next page: 禁止给catch语句中的异常参数赋值"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

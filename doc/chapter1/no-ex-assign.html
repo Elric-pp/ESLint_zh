@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>禁止给catch语句中的异常参数赋值 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-extra-boolean-cast.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-empty.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.12" data-chapter-title="禁止给catch语句中的异常参数赋值" data-filepath="doc/chapter1/no-ex-assign.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -257,7 +257,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12" data-path="doc/chapter1/no-ex-assign.html">
+        <li class="chapter active" data-level="1.12" data-path="doc/chapter1/no-ex-assign.html">
             
                 
                     <a href="../../doc/chapter1/no-ex-assign.html">
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -505,7 +505,18 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x7981;&#x6B62;&#x7ED9;catch&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x53C2;&#x6570;&#x8D4B;&#x503C;">&#x7981;&#x6B62;&#x7ED9;catch&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x53C2;&#x6570;&#x8D4B;&#x503C;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-ex-assign</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x8D4B;&#x503C;&#x7ED9;&#x5F02;&#x5E38;&#x53C2;&#x6570;&#x62B9;&#x53BB;&#x4E86;&#x5176;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x6709;&#x4EF7;&#x503C;&#x7684;&#x6570;&#x636E;, &#x5BFC;&#x81F4;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x63D0;&#x4F9B;, &#x5BF9;&#x5F02;&#x5E38;&#x7684;&#x5904;&#x7406;&#x5E26;&#x6765;&#x9EBB;&#x70E6;.</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-ex-assign: 2*/</span>
+
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// code</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">/*error Do not assign to the exception parameter.*/</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-ex-assign" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -516,10 +527,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-empty.html" class="navigation navigation-prev " aria-label="Previous page: 块语句内容不能为空"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-extra-boolean-cast.html" class="navigation navigation-next " aria-label="Next page: 避免冗余的布尔转换"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
