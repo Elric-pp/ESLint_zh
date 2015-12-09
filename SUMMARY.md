@@ -19,7 +19,7 @@
     + [禁止给函数赋值](./doc/chapter1/no-func-assign.md)
     + [禁止在块语句中声明](./doc/chapter1/no-inner-declarations.md)
     + [禁止无效的正则表达式](./doc/chapter1/no-invalid-regexp.md)
-    + [](./doc/chapter1/)
+    + [禁用不规则的空格](./doc/chapter1/no-irregular-whitespace.md)
     + [](./doc/chapter1/)
     + [](./doc/chapter1/)
     + [](./doc/chapter1/)
