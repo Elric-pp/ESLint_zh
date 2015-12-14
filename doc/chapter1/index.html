@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="1" data-chapter-title="易错点" data-filepath="doc/chapter1/README.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1" data-chapter-title="易错点" data-filepath="doc/chapter1/README.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -347,16 +347,91 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="doc/chapter1.html">
+        <li class="chapter " data-level="1.18" data-path="doc/chapter1/no-invalid-regexp.html">
             
                 
-                    <a href="../../doc/chapter1.html">
+                    <a href="../../doc/chapter1/no-invalid-regexp.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>1.18.</b>
                         
+                        禁止无效的正则表达式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="doc/chapter1/no-irregular-whitespace.html">
+            
+                
+                    <a href="../../doc/chapter1/no-irregular-whitespace.html">
+                
+                        <i class="fa fa-check"></i>
                         
+                            <b>1.19.</b>
+                        
+                        禁用不规则的空格
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="doc/chapter1/no-negated-in-lhs.html">
+            
+                
+                    <a href="../../doc/chapter1/no-negated-in-lhs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        在in操作符左侧禁用!
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="doc/chapter1/no-obj-calls.html">
+            
+                
+                    <a href="../../doc/chapter1/no-obj-calls.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                        禁止调用内置对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="doc/chapter1/no-regex-spaces.html">
+            
+                
+                    <a href="../../doc/chapter1/no-regex-spaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                        正则中禁用多个空格
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="doc/chapter1/no-sparse-arrays.html">
+            
+                
+                    <a href="../../doc/chapter1/no-sparse-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                        禁用稀疏数组
                     </a>
             
             
@@ -511,14 +586,25 @@
 <li><a href="no-cond-assign.html">&#x6761;&#x4EF6;&#x4E2D;&#x8D4B;&#x503C;</a></li>
 <li><a href="no-console.html">&#x7981;&#x7528;console</a></li>
 <li><a href="no-constant-condition.html">&#x5E38;&#x91CF;&#x4F5C;&#x6761;&#x4EF6;</a></li>
-<li><a href="#no-control-regex">&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7981;&#x7528;&#x63A7;&#x5236;&#x5B57;&#x7B26;</a></li>
-<li><a href="#no-debugger">&#x7981;&#x7528;debugger</a></li>
-<li><a href="#no-dupe-args">&#x7981;&#x6B62;&#x53C2;&#x6570;&#x91CD;&#x540D;</a></li>
-<li><a href="#no-dupe-keys">&#x7981;&#x6B62;&#x952E;&#x540D;&#x91CD;&#x590D;</a></li>
-<li><a href="#no-duplicate-case">&#x7981;&#x6B62;&#x91CD;&#x590D;&#x6761;&#x4EF6;</a></li>
-<li><a href="#no-empty-character-class">no-empty-character-class</a></li>
-<li><a href="#no-empty">no-empty</a></li>
-<li><a href="#no-ex-assign">no-ex-assign</a></li>
+<li><a href="no-control-regex.html">&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7981;&#x7528;&#x63A7;&#x5236;&#x5B57;&#x7B26;</a></li>
+<li><a href="no-debugger.html">&#x7981;&#x7528;debugger</a></li>
+<li><a href="no-dupe-args.html">&#x7981;&#x6B62;&#x53C2;&#x6570;&#x91CD;&#x540D;</a></li>
+<li><a href="no-dupe-keys.html">&#x7981;&#x6B62;&#x952E;&#x540D;&#x91CD;&#x590D;</a></li>
+<li><a href="no-duplicate-case.html">&#x7981;&#x6B62;&#x91CD;&#x590D;&#x6761;&#x4EF6;</a></li>
+<li><a href="no-empty-character-class.html">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4E0D;&#x5141;&#x8BB8;&#x7A7A;&#x5B57;&#x7B26;&#x8303;&#x56F4;</a></li>
+<li><a href="no-empty.html">&#x5757;&#x8BED;&#x53E5;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</a></li>
+<li><a href="no-ex-assign.html">&#x7981;&#x6B62;&#x7ED9;catch&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x53C2;&#x6570;&#x8D4B;&#x503C;</a></li>
+<li><a href="no-extra-boolean-cast.html">&#x907F;&#x514D;&#x5197;&#x4F59;&#x7684;&#x5E03;&#x5C14;&#x8F6C;&#x6362;</a></li>
+<li><a href="no-extra-parens.html">&#x907F;&#x514D;&#x591A;&#x4F59;&#x7684;&#x62EC;&#x53F7;</a></li>
+<li><a href="no-extra-semi.html">&#x907F;&#x514D;&#x591A;&#x4F59;&#x7684;&#x5206;&#x53F7;</a></li>
+<li><a href="no-func-assign.html">&#x7981;&#x6B62;&#x7ED9;&#x51FD;&#x6570;&#x8D4B;&#x503C;</a></li>
+<li><a href="no-inner-declarations.html">&#x7981;&#x6B62;&#x5728;&#x5757;&#x8BED;&#x53E5;&#x4E2D;&#x58F0;&#x660E;</a></li>
+<li><a href="no-invalid-regexp.html">&#x7981;&#x6B62;&#x65E0;&#x6548;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></li>
+<li><a href="no-irregular-whitespace.html">&#x7981;&#x7528;&#x4E0D;&#x89C4;&#x5219;&#x7684;&#x7A7A;&#x683C;</a></li>
+<li><a href="no-negated-in-lhs.html">&#x5728;in&#x64CD;&#x4F5C;&#x7B26;&#x5DE6;&#x4FA7;&#x7981;&#x7528;!</a></li>
+<li><a href="no-obj-calls.html">&#x7981;&#x6B62;&#x8C03;&#x7528;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;</a></li>
+<li><a href="no-regex-spaces.html">&#x6B63;&#x5219;&#x4E2D;&#x7981;&#x7528;&#x591A;&#x4E2A;&#x7A7A;&#x683C;</a></li>
+<li><a href="no-sparse-arrays.html">&#x7981;&#x7528;&#x7A00;&#x758F;&#x6570;&#x7EC4;</a></li>
 </ul>
 
                     

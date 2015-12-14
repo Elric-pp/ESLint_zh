@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="1.15" data-chapter-title="避免多余的分号" data-filepath="doc/chapter1/no-extra-semi.md" data-basepath="../.." data-revision="Tue Dec 08 2015 17:38:34 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.15" data-chapter-title="避免多余的分号" data-filepath="doc/chapter1/no-extra-semi.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -347,16 +347,91 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="doc/chapter1.html">
+        <li class="chapter " data-level="1.18" data-path="doc/chapter1/no-invalid-regexp.html">
             
                 
-                    <a href="../../doc/chapter1.html">
+                    <a href="../../doc/chapter1/no-invalid-regexp.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>1.18.</b>
                         
+                        禁止无效的正则表达式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="doc/chapter1/no-irregular-whitespace.html">
+            
+                
+                    <a href="../../doc/chapter1/no-irregular-whitespace.html">
+                
+                        <i class="fa fa-check"></i>
                         
+                            <b>1.19.</b>
+                        
+                        禁用不规则的空格
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="doc/chapter1/no-negated-in-lhs.html">
+            
+                
+                    <a href="../../doc/chapter1/no-negated-in-lhs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        在in操作符左侧禁用!
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="doc/chapter1/no-obj-calls.html">
+            
+                
+                    <a href="../../doc/chapter1/no-obj-calls.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                        禁止调用内置对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="doc/chapter1/no-regex-spaces.html">
+            
+                
+                    <a href="../../doc/chapter1/no-regex-spaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                        正则中禁用多个空格
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="doc/chapter1/no-sparse-arrays.html">
+            
+                
+                    <a href="../../doc/chapter1/no-sparse-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                        禁用稀疏数组
                     </a>
             
             
@@ -506,8 +581,8 @@
                     <section class="normal" id="section-">
                     
                         <h3 id="&#x907F;&#x514D;&#x591A;&#x4F59;&#x7684;&#x5206;&#x53F7;">&#x907F;&#x514D;&#x591A;&#x4F59;&#x7684;&#x5206;&#x53F7;</h3>
-<p>&#x89C4;&#x5219;&#x540D;&#x79F0;: no-extra-semi</p>
-<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x7531;&#x4E8E;&#x5BF9;js&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x6DFB;&#x52A0;&#x5206;&#x53F7;&#x7684;&#x4E0D;&#x4E86;&#x89E3;, &#x5BFC;&#x81F4;&#x5F88;&#x5BB9;&#x6613;&#x4E0D;&#x5C0F;&#x5FC3;&#x9020;&#x6210;&#x4E86;&#x591A;&#x4F59;&#x7684;&#x5206;&#x53F7;</p>
+<p>&#x89C4;&#x5219;&#x540D;: no-extra-semi</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: js&#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x6DFB;&#x52A0;&#x5206;&#x53F7;, &#x6240;&#x4EE5;, &#x4E66;&#x5199;&#x9519;&#x8BEF;&#x6216;&#x8005;&#x4E0D;&#x6E05;&#x695A;&#x54EA;&#x91CC;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x5206;&#x53F7;&#x4F1A;&#x5BFC;&#x81F4;&#x591A;&#x4F59;&#x7684;&#x5206;&#x53F7;</p>
 <pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-extra-semi: 2*/</span>
 
 <span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">/*error Unnecessary semicolon.*/</span>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>在in操作符左侧禁用! | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-obj-calls.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-irregular-whitespace.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.20" data-chapter-title="在in操作符左侧禁用!" data-filepath="doc/chapter1/no-negated-in-lhs.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -377,7 +377,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20" data-path="doc/chapter1/no-negated-in-lhs.html">
+        <li class="chapter active" data-level="1.20" data-path="doc/chapter1/no-negated-in-lhs.html">
             
                 
                     <a href="../../doc/chapter1/no-negated-in-lhs.html">
@@ -502,7 +502,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -580,7 +580,31 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x5728;in&#x64CD;&#x4F5C;&#x7B26;&#x5DE6;&#x4FA7;&#x7981;&#x7528;">&#x5728;in&#x64CD;&#x4F5C;&#x7B26;&#x5DE6;&#x4FA7;&#x7981;&#x7528;!</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-negated-in-lhs</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x6F5C;&#x5728;&#x9519;&#x8BEF;</p>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x60F3;&#x8981;&#x5199;:</p>
+<pre><code class="lang-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>a <span class="token keyword">in</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// do something</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4ED6;&#x4EEC;&#x5F88;&#x53EF;&#x80FD;&#x5199;&#x6210;:</p>
+<pre><code class="lang-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>a <span class="token keyword">in</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//do something</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7136;&#x800C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x4EE5;&#x4E0A;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x6309;&#x8BBE;&#x60F3;&#x8FD0;&#x884C;, &#x5DE6;&#x4FA7;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x5E94;&#x8BE5;&#x663E;&#x5F0F;&#x7684;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;, &#x5982;&#x4E0B;:</p>
+<pre><code class="lang-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span> <span class="token operator">+</span> <span class="token operator">!</span>a<span class="token punctuation">)</span> <span class="token keyword">in</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// do  something</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x4F1A;&#x88AB;&#x5F53;&#x4F5C;&#x9519;&#x8BEF;:</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-negated-in-lhs: 2*/</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>a <span class="token keyword">in</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>       <span class="token comment" spellcheck="true">/*error The `in` expression&apos;s left operand is negated*/</span>
+    <span class="token comment" spellcheck="true">// do something</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
                     
                     </section>
@@ -591,10 +615,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-irregular-whitespace.html" class="navigation navigation-prev " aria-label="Previous page: 禁用不规则的空格"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-obj-calls.html" class="navigation navigation-next " aria-label="Next page: 禁止调用内置对象"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

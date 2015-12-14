@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>禁止无效的正则表达式 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-irregular-whitespace.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-inner-declarations.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.18" data-chapter-title="禁止无效的正则表达式" data-filepath="doc/chapter1/no-invalid-regexp.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -347,7 +347,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="doc/chapter1/no-invalid-regexp.html">
+        <li class="chapter active" data-level="1.18" data-path="doc/chapter1/no-invalid-regexp.html">
             
                 
                     <a href="../../doc/chapter1/no-invalid-regexp.html">
@@ -502,7 +502,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -580,8 +580,24 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x7981;&#x6B62;&#x65E0;&#x6548;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x7981;&#x6B62;&#x65E0;&#x6548;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h3>
+<p>&#x89C4;&#x5219;&#x540D;:   no-invalid-regexp.md</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x8BE5;&#x89C4;&#x5219;&#x6821;&#x9A8C;&#x4F20;&#x7ED9;<code>RegExp</code>&#x5BF9;&#x8C61;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-invalid-regexp: 2*/</span>
 
+<span class="token function">RegExp</span><span class="token punctuation">(</span><span class="token string">&apos;[&apos;</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true">/*error Invalid regular expression: /[/: Unterminated character class*/</span>
+
+<span class="token function">RegExp</span><span class="token punctuation">(</span><span class="token string">&apos;.&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;z&apos;</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">/*error Invalid flags supplied to RegExp constructor &apos;z&apos;*/</span>
+
+<span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">&apos;\\&apos;</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">/*error Invalid regular expression: /\/: \ at end of pattern*/</span>
+</code></pre>
+<p>ES6&#x65B0;&#x7684;&#x4FEE;&#x9970;&#x7B26;
+ECMAScript 6 &#x6DFB;&#x52A0;&#x4E86;&#x65B0;&#x7684;&#x4FEE;&#x9970;&#x7B26; &quot;u&quot;<a href="http://es6.ruanyifeng.com/#docs/regex#u&#x4FEE;&#x9970;&#x7B26;" target="_blank">unicode</a> &#x548C; &quot;y&quot;<a href="http://es6.ruanyifeng.com/#docs/regex#y&#x4FEE;&#x9970;&#x7B26;" target="_blank">sticky</a>, &#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5230;<code>.eslintrc</code>&#x4E2D;&#x4EE5;&#x542F;&#x7528;&#x5B83;&#x4EEC;</p>
+<pre><code>&quot;ecmaFeatures&quot;: {
+  &quot;regexYFlag&quot;: true,
+  &quot;regexUFlag&quot;: true
+}
+</code></pre>
                     
                     </section>
                 
@@ -591,10 +607,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-inner-declarations.html" class="navigation navigation-prev " aria-label="Previous page: 禁止在块语句中声明"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-irregular-whitespace.html" class="navigation navigation-next " aria-label="Next page: 禁用不规则的空格"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

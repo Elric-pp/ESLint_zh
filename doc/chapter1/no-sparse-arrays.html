@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>禁用稀疏数组 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter2/index.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-regex-spaces.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.23" data-chapter-title="禁用稀疏数组" data-filepath="doc/chapter1/no-sparse-arrays.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -422,7 +422,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.23" data-path="doc/chapter1/no-sparse-arrays.html">
+        <li class="chapter active" data-level="1.23" data-path="doc/chapter1/no-sparse-arrays.html">
             
                 
                     <a href="../../doc/chapter1/no-sparse-arrays.html">
@@ -502,7 +502,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -580,7 +580,15 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x7981;&#x7528;&#x7A00;&#x758F;&#x6570;&#x7EC4;">&#x7981;&#x7528;&#x7A00;&#x758F;&#x6570;&#x7EC4;</h3>
+<p>&#x89C4;&#x5219;&#x540D;&#x79F0;: no-sparse-arrays</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x7A00;&#x758F;&#x6570;&#x7EC4;&#x5BB9;&#x6613;&#x4F7F;&#x5176;&#x4ED6;&#x4EBA;&#x8FF7;&#x60D1;, &#x5230;&#x5E95;&#x662F;&#x6545;&#x610F;&#x7684;&#x4EE3;&#x7801;&#x8FD8;&#x662F;&#x4E66;&#x5199;&#x9519;&#x8BEF;, &#x6240;&#x4EE5;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x7A00;&#x758F;&#x6570;&#x7EC4;&#x9664;&#x975E;&#x4F60;&#x786E;&#x4FE1;&#x5B83;&#x6709;&#x7528;&#x5904;;</p>
+<pre><code class="lang-js"> <span class="token comment" spellcheck="true">/*eslint no-sparse-arrays: 2*/</span>
+
+<span class="token keyword">var</span> items <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                 <span class="token comment" spellcheck="true">/*error Unexpected comma in middle of array.*/</span>
+<span class="token keyword">var</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">,</span><span class="token punctuation">,</span> <span class="token string">&quot;blue&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error Unexpected comma in middle of array.*/</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-sparse-arrays" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -591,10 +599,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-regex-spaces.html" class="navigation navigation-prev " aria-label="Previous page: 正则中禁用多个空格"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter2/index.html" class="navigation navigation-next " aria-label="Next page: 最佳实践"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

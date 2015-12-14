@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>禁止调用内置对象 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-regex-spaces.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-negated-in-lhs.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.21" data-chapter-title="禁止调用内置对象" data-filepath="doc/chapter1/no-obj-calls.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -392,7 +392,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.21" data-path="doc/chapter1/no-obj-calls.html">
+        <li class="chapter active" data-level="1.21" data-path="doc/chapter1/no-obj-calls.html">
             
                 
                     <a href="../../doc/chapter1/no-obj-calls.html">
@@ -502,7 +502,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -580,7 +580,15 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x7981;&#x6B62;&#x8C03;&#x7528;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;">&#x7981;&#x6B62;&#x8C03;&#x7528;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;</h3>
+<p>&#x89C4;&#x5219;&#x540D;&#x79F0;: no-obj-calls</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: ECMAScript &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6807;&#x51C6;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x4F9B;&#x4F7F;&#x7528;, &#x6709;&#x4E00;&#x4E9B;&#x5BF9;&#x8C61;&#x56E0;&#x4E3A;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x770B;&#x4E0A;&#x53BB;&#x597D;&#x50CF;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;(&#x5982; <code>Math</code> &#x548C; <code>Json</code>), &#x4F46;&#x5982;&#x679C;&#x4F60;&#x628A;&#x4ED6;&#x4EEC;&#x5F53;&#x51FD;&#x6570;&#x6765;&#x8C03;&#x7528;&#x65F6;&#x5C06;&#x4F1A;&#x62A5;&#x9519;</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-obj-calls: 2*/</span>
+
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token function">Math</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error &apos;Math&apos; is not a function.*/</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token function">JSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*error &apos;JSON&apos; is not a function.*/</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-obj-calls" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -591,10 +599,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-negated-in-lhs.html" class="navigation navigation-prev " aria-label="Previous page: 在in操作符左侧禁用!"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-regex-spaces.html" class="navigation navigation-next " aria-label="Next page: 正则中禁用多个空格"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

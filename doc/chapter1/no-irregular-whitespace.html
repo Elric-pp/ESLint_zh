@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>代码风格 | 简介</title>
+        <title>禁用不规则的空格 | 简介</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../doc/chapter7/index.html" />
+    <link rel="next" href="../../doc/chapter1/no-negated-in-lhs.html" />
     
     
-    <link rel="prev" href="../../doc/chapter5/index.html" />
+    <link rel="prev" href="../../doc/chapter1/no-invalid-regexp.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6" data-chapter-title="代码风格" data-filepath="doc/chapter6/README.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.19" data-chapter-title="禁用不规则的空格" data-filepath="doc/chapter1/no-irregular-whitespace.md" data-basepath="../.." data-revision="Mon Dec 14 2015 17:52:51 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -362,7 +362,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="doc/chapter1/no-irregular-whitespace.html">
+        <li class="chapter active" data-level="1.19" data-path="doc/chapter1/no-irregular-whitespace.html">
             
                 
                     <a href="../../doc/chapter1/no-irregular-whitespace.html">
@@ -502,7 +502,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="doc/chapter6/index.html">
+        <li class="chapter " data-level="6" data-path="doc/chapter6/index.html">
             
                 
                     <a href="../../doc/chapter6/index.html">
@@ -580,7 +580,75 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="&#x4EE3;&#x7801;&#x98CE;&#x683C;">&#x4EE3;&#x7801;&#x98CE;&#x683C;</h2>
+                        <h3 id="&#x7981;&#x7528;&#x4E0D;&#x89C4;&#x5219;&#x7684;&#x7A7A;&#x683C;">&#x7981;&#x7528;&#x4E0D;&#x89C4;&#x5219;&#x7684;&#x7A7A;&#x683C;</h3>
+<p>&#x89C4;&#x5219;&#x540D;: no-irregular-whitespace</p>
+<p>&#x89C4;&#x5219;&#x89E3;&#x91CA;: &#x65E0;&#x6548;&#x6216;&#x8005;&#x4E0D;&#x89C4;&#x5219;&#x7684;&#x7A7A;&#x683C;&#x4F1A;&#x5BFC;&#x81F4; ECMAScirpt 5 &#x89E3;&#x91CA;&#x5668;&#x51FA;&#x73B0;&#x95EE;&#x9898;,  &#x540C;&#x65F6;&#x4E5F;&#x5BFC;&#x81F4;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x5927;&#x5927;&#x964D;&#x4F4E;, &#x5C31;&#x50CF;&#x6DF7;&#x7528; <code>tab</code> &#x548C; <code>space</code> &#x4E00;&#x6837;</p>
+<blockquote>
+<p>&#x5DF2;&#x77E5;&#x7684;&#x95EE;&#x9898;&#x6709;:</p>
+<ul>
+<li>&#x96F6;&#x5BBD;&#x7A7A;&#x683C;<ul>
+<li>&#x89E3;&#x91CA;&#x5668;&#x4E0D;&#x4F1A;&#x628A;&#x5B83;&#x5355;&#x505A;&#x5206;&#x9694;&#x7B26;, &#x62A5;<code>Unexpected token ILLEGAL</code></li>
+<li>&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x4F1A;&#x5C55;&#x73B0;&#x5B83;, &#x5BFC;&#x81F4;&#x4E86;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x5DEE;&#x5F02;</li>
+</ul>
+</li>
+<li>&#x6362;&#x884C;&#x7B26;<ul>
+<li>&#x5728;JSON&#x4E2D;&#x4F7F;&#x7528;&#x4F1A;&#x5BFC;&#x81F4;&#x89E3;&#x6790;&#x9519;&#x8BEF;</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>&#x8BE5;&#x89C4;&#x5219;&#x5BF9;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4EE5;&#x5916;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#x62A5;&#x9519;:</p>
+<pre><code>\u000B - Line Tabulation (\v) - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VT</span><span class="token punctuation">&gt;</span></span>
+\u000C - Form Feed (\f) - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FF</span><span class="token punctuation">&gt;</span></span>
+\u00A0 - No-Break Space - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NBSP</span><span class="token punctuation">&gt;</span></span>
+\u0085 - Next Line
+\u1680 - Ogham Space Mark
+\u180E - Mongolian Vowel Separator - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MVS</span><span class="token punctuation">&gt;</span></span>
+\ufeff - Zero Width No-Break Space - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BOM</span><span class="token punctuation">&gt;</span></span>
+\u2000 - En Quad
+\u2001 - Em Quad
+\u2002 - En Space - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENSP</span><span class="token punctuation">&gt;</span></span>
+\u2003 - Em Space - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EMSP</span><span class="token punctuation">&gt;</span></span>
+\u2004 - Tree-Per-Em
+\u2005 - Four-Per-Em
+\u2006 - Six-Per-Em
+\u2007 - Figure Space
+\u2008 - Punctuation Space - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PUNCSP</span><span class="token punctuation">&gt;</span></span>
+\u2009 - Thin Space
+\u200A - Hair Space
+\u200B - Zero Width Space - <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ZWSP</span><span class="token punctuation">&gt;</span></span>
+\u2028 - Line Separator
+\u2029 - Paragraph Separator
+\u202F - Narrow No-Break Space
+\u205f - Medium Mathematical Space
+\u3000 - Ideographic Space
+</code></pre><pre><code class="lang-js"><span class="token comment" spellcheck="true">/*eslint no-irregular-whitespace: 2*/</span>
+
+<span class="token keyword">function</span> <span class="token function">thing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">/*&lt;NBSP&gt;*/</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*error Irregular whitespace not allowed*/</span>
+  <span class="token keyword">return</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">thing</span><span class="token punctuation">(</span> <span class="token comment" spellcheck="true">/*&lt;NBSP&gt;*/</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*error Irregular whitespace not allowed*/</span>
+  <span class="token keyword">return</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> thing <span class="token comment" spellcheck="true">/*&lt;NBSP&gt;*/</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*error Irregular whitespace not allowed*/</span>
+  <span class="token keyword">return</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> thing&#x180E;<span class="token comment" spellcheck="true">/*&lt;MVS&gt;*/</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment" spellcheck="true">/*error Irregular whitespace not allowed*/</span>
+  <span class="token keyword">return</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">thing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">;</span>&#x2002;<span class="token comment" spellcheck="true">/*&lt;ENSP&gt;*/</span>  <span class="token comment" spellcheck="true">/*error Irregular whitespace not allowed*/</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">thing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*&lt;NBSP&gt;*/</span>  <span class="token comment" spellcheck="true">/*error Irregular whitespace not allowed*/</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a href="http://eslint.org/docs/rules/no-irregular-whitespace" target="_blank">&#x6E90;&#x5730;&#x5740;</a></p>
 
                     
                     </section>
@@ -591,10 +659,10 @@
         </div>
 
         
-        <a href="../../doc/chapter5/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js 和 CommonJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../../doc/chapter1/no-invalid-regexp.html" class="navigation navigation-prev " aria-label="Previous page: 禁止无效的正则表达式"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../doc/chapter7/index.html" class="navigation navigation-next " aria-label="Next page: ECMAScript 6"><i class="fa fa-angle-right"></i></a>
+        <a href="../../doc/chapter1/no-negated-in-lhs.html" class="navigation navigation-next " aria-label="Next page: 在in操作符左侧禁用!"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
